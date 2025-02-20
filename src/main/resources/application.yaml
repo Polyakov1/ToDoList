@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myDataBase
+    username: Polyakov
+    password: tiger123
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+    com.yourpackage: DEBUG
