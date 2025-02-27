@@ -1,15 +1,19 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/myDataBase
-    username: Polyakov
-    password: tiger123
-    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ToDoBase
+    username: postgres
+    password: 420875ff
+  security:
+    user:
+      name: Revan
+      password: 123
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
-logging:
-  level:
-    root: INFO
-    org.springframework: DEBUG
-    com.yourpackage: DEBUG
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
